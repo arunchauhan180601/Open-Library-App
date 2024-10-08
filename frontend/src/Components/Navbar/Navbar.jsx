@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="container ">
           <div className="d-flex align-items-center">
             <Link className="navbar-brand" to="/"><img src={logo} alt="logo" width="65" /></Link>
-            <span className="navbar-email fs-3 mt-2"><Link to="/"> SHOPPER  </Link></span>
+            <span className="navbar-email fs-3 mt-2"><Link to="/"> OPEN-LIBRARY  </Link></span>
           </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,16 +25,16 @@ const Navbar = () => {
           <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <Link className="nav-link ul-color" aria-current="page" to="/">Shop</Link>
+                <Link className="nav-link ul-color" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dinners">Dinner</Link>
+                <Link className="nav-link" to="/trending">Trending</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " aria-current="page" to="/lunches">Lunch</Link>
+                <Link className="nav-link " aria-current="page" to="/classic">Classic</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/breakfasts">Breakfast</Link>
+                <Link className="nav-link" to="/recently_returned">Recently Returned</Link>
               </li>
             </ul>
 

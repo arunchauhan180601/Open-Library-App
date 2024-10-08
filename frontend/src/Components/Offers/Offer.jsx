@@ -13,7 +13,7 @@ const Offer = () => {
 
         <div className="col-md-5 col-sm-6  offer-left-side  ">
           <h1 className='offer-heading'>Exclusive <br /> Offers For You</h1>
-          <p className='offer-subheading'>ONLY ON BEST COOKING RECIPES</p>
+          <p className='offer-subheading'>ONLY ON OPEN LIBRARY APP</p>
           <Link to="#"> <button type="button" className="btn  offer-btn"> Check Now </button></Link>
         </div>
 

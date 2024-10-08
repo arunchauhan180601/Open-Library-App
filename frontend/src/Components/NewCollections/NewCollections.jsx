@@ -18,7 +18,7 @@ const NewCollections = () => {
 
         <div className="row">
           <div className="col-12">
-            <h1 className='text-center mb-1'>NEW RECIPES</h1>
+            <h1 className='text-center mb-1'>NEW BOOKS</h1>
             <div className='collection_underline'></div>
           </div>
         </div>

@@ -49,7 +49,7 @@ const ListProduct = () => {
         <div className="row fw-bold text-center   ">
           <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">Products</div>
           <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">Title</div>
-          <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">Old_Price</div>
+          <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">Author</div>
           <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">New_Price</div>
           <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">Category</div>
           <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder headeringBgColor">Remove</div>
@@ -60,7 +60,7 @@ const ListProduct = () => {
             <div className="row fw-bold text-center   bgcolorofHeadingRow mt-3" key={index}>
               <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder"> <img src={product.image} className='productImage' />  </div>
               <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder productName"> {product.name} </div>
-              <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder"> {product.old_price} </div>
+              <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder"> {product.author} </div>
               <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder"> {product.new_price} </div>
               <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder"> {product.category}</div>
               <div className="col-sm-3  col-md-2 col-3 pt-3  pb-3 cardBorder"> <img src={remove_icon} onClick={() => { remove_product(product.id) }} /> </div>

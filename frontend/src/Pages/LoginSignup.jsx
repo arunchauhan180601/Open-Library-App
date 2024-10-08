@@ -77,7 +77,7 @@ const LoginSignup = () => {
             <h2>{state}</h2>
             {state === "Sign Up" ? <input type='text' placeholder='Your Name' className='signupInput' name='name' value={formData.name} onChange={changeHandler} ></input> : <></>}
             <input type='text' placeholder='Email Address' className='signupInput' name='email' onChange={changeHandler} value={formData.email}></input>
-            <input type='text' placeholder='Password' className='signupInput' name='password' onChange={changeHandler} value={formData.password}></input>
+            <input type='text' placeholder='Password' autoComplete='off' className='signupInput' name='password' onChange={changeHandler} value={formData.password}></input>
             <button onClick={() => { state === "Login" ? login() : signup() }}
               className='signupInput signupbtn'>Continue</button>
 

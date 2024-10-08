@@ -9,9 +9,9 @@ const Footer = () => {
     <div className="container   pb-3 pt-5">
       <div className="row mt-5  mb-3 d-flex justify-content-center align-items-center">
 
-        <div className="col-lg-2 col-md-4 d-flex justify-content-center align-items-center pt-2">
+        <div className="col-lg-4 col-md-4 d-flex justify-content-center align-items-center pt-2">
           <img src={logo_img} />
-          <h2 className='fs-2 fw-bold ps-3'>SHOPPER</h2>
+          <h2 className='fs-2 fw-bold ps-3'>OPEN LIBRARY</h2>
         </div>
       </div>
 

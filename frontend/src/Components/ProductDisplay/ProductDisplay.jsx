@@ -53,28 +53,23 @@ const ProductDisplay = ({ product }) => {
             <p className='pt-3 '>(122)</p>
           </div>
 
+
+
           <pre className='pt-3 productIngredients'>
-            {product.ingredients}
+            {product.details}
           </pre>
 
-          <h5>Select Size</h5>
-
-          <div className='d-flex  flex-wrap'>
-            <div className='productSizeBtn mt-3'>S</div>
-            <div className='productSizeBtn mt-3'>M</div>
-            <div className='productSizeBtn mt-3'>L</div>
-            <div className='productSizeBtn mt-3'>XL</div>
-            <div className='productSizeBtn mt-3'>XXL</div>
-
-          </div>
-
-          <div className='mt-3'>
-            <button className='btn btn-danger mt-3 ps-5 pe-5 pt-2 pb-2 fs-5' onClick={() => { addToCart(product.id) }} >Add to Cart</button>
-          </div>
-
           <div className='mt-5'>
-            <p>category : {product.category}, Lunch </p>
-            <p>Tags : Modern, Latest</p>
+            <h5 ><span className='text-danger'> Author </span>: {product.author}</h5>
+          </div>
+
+          <div className='mt-4'>
+            <h5 > <span className='text-danger'> category : </span> {product.category}, Popular </h5>
+            <h5 className='mt-4'> <span className='text-danger'> Tags : </span> Modern, Latest</h5>
+          </div>
+
+          <div className='mt-4'>
+            <button className='btn btn-danger mt-3 ps-5 pe-5 pt-2 pb-2 fs-5' onClick={() => { addToCart(product.id) }} >Add to Cart</button>
           </div>
 
         </div>

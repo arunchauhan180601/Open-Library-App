@@ -97,14 +97,23 @@ const ShopContextProvider = ({ children }) => {
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    for (const item in cartItems) {
-      if (cartItems[item] > 0) {
-        let itemInfo = contextValue.find((product) => product.id === Number(item));
-        totalAmount += itemInfo.new_price * cartItems[item];
+
+    // Assuming cartItems is an object where keys are product IDs and values are quantities
+    for (const [itemId, quantity] of Object.entries(cartItems)) {
+      if (quantity > 0) {
+        // Find the product in contextValue based on the itemId
+        const itemInfo = contextValue.find((product) => product.id === Number(itemId));
+
+        // Check if itemInfo is found and has new_price defined
+        if (itemInfo && itemInfo.new_price != null) {
+          totalAmount += itemInfo.new_price * quantity; // Calculate total for this item
+        }
       }
     }
+
     return totalAmount;
   };
+
 
   const getTotalCartItems = () => {
     let totalItem = 0;

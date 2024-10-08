@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended: false}));
 
 
 app.get("/", (req, res)=> {
-  res.send("Welcome to E-commerce backend API");
+  res.send("Welcome to E-Book backend API");
 })
 
 
@@ -55,6 +55,10 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
    },
+   author: {
+    type: String,
+    required: true
+   },
    image: {
     type: String,
     required: true
@@ -63,7 +67,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
    },
-   ingredients: {
+   details: {
     type: String,
     required: true
    },
@@ -109,7 +113,8 @@ app.post("/addProduct", async (req, res)=>{
       category: req.body.category,
       new_price: req.body.new_price,
       old_price: req.body.old_price,
-      ingredients: req.body.ingredients,
+      details: req.body.details,
+      author: req.body.author
     });
 
     console.log(product);
@@ -233,11 +238,11 @@ app.post("/login", async (req, res)=> {
 
     // Creating endpoint for Popular in women 
 
-    app.get("/popularinlunch", async (req, res)=> {
-      let products = await Product.find({category: "lunch"});
-      let popularinlunch = products.slice(0,4);
-      console.log("PopularInLunch Fetched");
-      res.send(popularinlunch)
+    app.get("/popularBooks", async (req, res)=> {
+      let products = await Product.find({category: "Trending"});
+      let popularBooks = products.slice(0,4);
+      console.log("PopularBooks Fetched");
+      res.send(popularBooks)
     })
 
     // creating middleware to fetch user

@@ -10,10 +10,10 @@ import LoginSignup from "./Pages/LoginSignup"
 import Shop from "./Pages/shop"
 import Footer from "./Components/Footer/Footer"
 
+import Trending_books from "./Components/Assets/Trending-Books.jpg"
+import Classic_books from "./Components/Assets/Classic-books.avif"
+import Recently_Returned from "./Components/Assets/Recently-Returned.jpg"
 
-import breakfast_banner from "./Components/Assets/breakfast_banner1.avif"
-import lunch_banner from "./Components/Assets/lunch_banner1.jpg"
-import dinner_banner from "./Components/Assets/dinner_banner.avif"
 
 
 function App() {
@@ -25,9 +25,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} > </Route>
-          <Route path="/dinners" element={<ShopCategory banner={dinner_banner} category="dinner" />} > </Route>
-          <Route path="/lunches" element={<ShopCategory banner={lunch_banner} category="lunch" />} > </Route>
-          <Route path="/breakfasts" element={<ShopCategory banner={breakfast_banner} category="breakfast" />} > </Route>
+          <Route path="/trending" element={<ShopCategory banner={Trending_books} category="Trending" />} > </Route>
+          <Route path="/classic" element={<ShopCategory banner={Classic_books} category="Classic" />} > </Route>
+          <Route path="/recently_returned" element={<ShopCategory banner={Recently_Returned} category="Recently_Returned" />} > </Route>
           <Route path="/product" element={<Product />} >
             <Route path=":productId" element={<Product />} ></Route>
           </Route>
